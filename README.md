@@ -1,6 +1,6 @@
-{{AppVeyor build status badge for master branch}}
+[![Build status](https://ci.appveyor.com/api/projects/status/y2ohjd5q86oagghu/branch/master?svg=true)](https://ci.appveyor.com/project/PowerShell/xpowershellexecutionpolicy/branch/master)
 
-#{{ModuleName}}
+# xPowerShellExecutionPolicy
 
 {{Description}}
 
