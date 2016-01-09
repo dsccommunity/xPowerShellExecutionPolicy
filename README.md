@@ -19,6 +19,10 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 
 ## Versions
 
+### Unreleased
+
+* Added test cases and Set now throws most exceptions
+
 ### 1.0.0.0
 
 * Initial release with the following resources 
