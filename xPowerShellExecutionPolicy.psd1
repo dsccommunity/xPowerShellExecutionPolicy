@@ -2,7 +2,7 @@
 # Script module or binary module file associated with this manifest.
 
 # Version number of this module.
-ModuleVersion = '1.0.0'
+ModuleVersion = '1.1.0.0'
 
 # ID used to uniquely identify this module
 GUID = 'ee440155-d4cc-4ec8-9822-2a9bd7d8c82f'
