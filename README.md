@@ -21,6 +21,8 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 
 ### Unreleased
 
+### 1.2.0.0
+
 ### 1.1.0.0
 
 * Added test cases and Set now throws most exceptions
