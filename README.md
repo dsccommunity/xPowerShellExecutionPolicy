@@ -18,12 +18,14 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 ### xPowerShellExecutionPolicy
 
 * **ExecutionPolicy**: Specifies the desired PowerShell execution policy.
+* **Scope**: Specifies the scope of the desired PowerShell execution policy. Defaults to 'LocalMachine'.
 
 
 ## Versions
 
 ### Unreleased
 * Converted appveyor.yml to install Pester from PSGallery instead of from Chocolatey.
+* Added optional -Scope parameter
 
 ### 1.1.0.0
 

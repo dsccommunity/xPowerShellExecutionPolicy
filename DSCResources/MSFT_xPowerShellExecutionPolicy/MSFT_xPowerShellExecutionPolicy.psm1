@@ -9,11 +9,18 @@ function Get-TargetResource
         [parameter(Mandatory = $true)]
         [ValidateSet("Bypass","Restricted","AllSigned","RemoteSigned","Unrestricted")]
         [System.String]
-        $ExecutionPolicy
+        $ExecutionPolicy,
+        [parameter(Mandatory = $false)]
+        [ValidateSet("CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy")]
+        [System.String]
+        $Scope = 'LocalMachine'
     )
     
     #Gets the execution policies for the current session.
-    $returnValue = @{ExecutionPolicy = $(Get-ExecutionPolicy)}
+    $returnValue = @{
+        ExecutionPolicy = $(Get-ExecutionPolicy -Scope $Scope)
+        Scope = $Scope
+    }
 
     $returnValue
 }
@@ -27,7 +34,11 @@ function Set-TargetResource
         [parameter(Mandatory = $true)]
         [ValidateSet("Bypass","Restricted","AllSigned","RemoteSigned","Unrestricted")]
         [System.String]
-        $ExecutionPolicy
+        $ExecutionPolicy,
+        [parameter(Mandatory = $false)]
+        [ValidateSet("CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy")]
+        [System.String]
+        $Scope = 'LocalMachine'
     )
     
     If($PSCmdlet.ShouldProcess("$ExecutionPolicy","Set-ExecutionPolicy"))
@@ -35,7 +46,7 @@ function Set-TargetResource
         Try
         {
             Write-Verbose "Setting the execution policy of PowerShell."
-            Set-ExecutionPolicy -ExecutionPolicy $ExecutionPolicy -Force -ErrorAction Stop
+            Set-ExecutionPolicy -ExecutionPolicy $ExecutionPolicy -Force -ErrorAction Stop -Scope $Scope
         }
         Catch
         {
@@ -61,10 +72,14 @@ function Test-TargetResource
         [parameter(Mandatory = $true)]
         [ValidateSet("Bypass","Restricted","AllSigned","RemoteSigned","Unrestricted")]
         [System.String]
-        $ExecutionPolicy
+        $ExecutionPolicy,
+        [parameter(Mandatory = $false)]
+        [ValidateSet("CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy")]
+        [System.String]
+        $Scope = 'LocalMachine'
     )
 
-    If($(Get-ExecutionPolicy) -eq $ExecutionPolicy)
+    If($(Get-ExecutionPolicy -Scope $Scope) -eq $ExecutionPolicy)
     {
         return $true
     }
