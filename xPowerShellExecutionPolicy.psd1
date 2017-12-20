@@ -2,6 +2,7 @@
 # Script module or binary module file associated with this manifest.
 
 # Version number of this module.
+
 ModuleVersion = '2.0.0.0'
 
 # ID used to uniquely identify this module
