@@ -1,11 +1,29 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/y2ohjd5q86oagghu/branch/master?svg=true)](https://ci.appveyor.com/project/PowerShell/xpowershellexecutionpolicy/branch/master)
-
 # xPowerShellExecutionPolicy
 
 The **xPowerShellExecutionPolicy** modules contains the **xPowerShellExecutionPolicy** DSC resource for configuring the PowerShell execution policy.
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+## Branches
+
+### master
+
+[![Build status](https://ci.appveyor.com/api/projects/status/y2ohjd5q86oagghu/branch/master?svg=true)](https://ci.appveyor.com/project/PowerShell/xPowerShellExecutionPolicy/branch/master)
+[![codecov](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/master/graph/badge.svg)](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/master)
+
+This is the branch containing the latest release -
+no contributions should be made directly to this branch.
+
+### dev
+
+[![Build status](https://ci.appveyor.com/api/projects/status/y2ohjd5q86oagghu/branch/dev?svg=true)](https://ci.appveyor.com/project/PowerShell/xPowerShellExecutionPolicy/branch/dev)
+[![codecov](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/dev/graph/badge.svg)](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/dev)
+
+This is the development branch
+to which contributions should be proposed by contributors as pull requests.
+This development branch will periodically be merged to the master branch,
+and be released to [PowerShell Gallery](https://www.powershellgallery.com/).
 
 ## Contributing
 
@@ -42,6 +60,6 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 
 ## Examples
 
-### Setting the PowerShell execution policy to Bypass 
+### Setting the PowerShell execution policy to Bypass
 
 In the Examples folder, SetPowerShellExecutionPolicy.ps1 is a sample configuration that demonstrates how to use xPowerShellExecutionPolicy to set the execution policy.
