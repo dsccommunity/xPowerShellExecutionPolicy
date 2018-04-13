@@ -4,14 +4,12 @@
 
 The **xPowerShellExecutionPolicy** modules contains the **xPowerShellExecutionPolicy** DSC resource for configuring the PowerShell execution policy.
 
-
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Contributing
 
 Please check out common DSC Resources [contributing guidelines](https://github.com/PowerShell/DscResource.Kit/blob/master/CONTRIBUTING.md).
-
 
 ## Resources
 
@@ -20,10 +18,11 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 * **ExecutionPolicy**: Specifies the desired PowerShell execution policy.
 * **Scope**: Specifies the scope of the desired PowerShell execution policy. Defaults to 'LocalMachine'.
 
-
 ## Versions
 
 ### Unreleased
+
+* Fixed bug in which unit tests were not being run and also when run would have failed.
 
 ### 2.0.0.0
 
@@ -36,9 +35,8 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 
 ### 1.0.0.0
 
-* Initial release with the following resources 
-    - xPowerShellExecutionPolicy
-
+* Initial release with the following resources
+  * xPowerShellExecutionPolicy
 
 ## Examples
 
