@@ -10,7 +10,6 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 ### master
 
 [![Build status](https://ci.appveyor.com/api/projects/status/y2ohjd5q86oagghu/branch/master?svg=true)](https://ci.appveyor.com/project/PowerShell/xPowerShellExecutionPolicy/branch/master)
-[![codecov](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/master/graph/badge.svg)](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/master)
 
 This is the branch containing the latest release -
 no contributions should be made directly to this branch.
@@ -18,7 +17,6 @@ no contributions should be made directly to this branch.
 ### dev
 
 [![Build status](https://ci.appveyor.com/api/projects/status/y2ohjd5q86oagghu/branch/dev?svg=true)](https://ci.appveyor.com/project/PowerShell/xPowerShellExecutionPolicy/branch/dev)
-[![codecov](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/dev/graph/badge.svg)](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/dev)
 
 This is the development branch
 to which contributions should be proposed by contributors as pull requests.
