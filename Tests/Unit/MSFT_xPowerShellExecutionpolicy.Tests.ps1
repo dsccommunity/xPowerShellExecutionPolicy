@@ -115,6 +115,10 @@ try
                 { Set-TargetResource -ExecutionPolicy 'badParam' } | should throw $invalidPolicyThrowMessage
             }
 
+            It 'Throws when passed an invalid scope' {
+                { Set-TargetResource -ExecutionPolicy 'LocalMachine' -Scope "badParam" } | should throw $invalidScopeThrowMessage
+            }
+
             It 'Set-ExecutionPolicy scope warning exception is caught' {
                 Mock -CommandName Set-ExecutionPolicy -MockWith { Throw 'Windows PowerShell updated your execution policy successfully.' }
 
