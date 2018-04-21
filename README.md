@@ -10,6 +10,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 ### master
 
 [![Build status](https://ci.appveyor.com/api/projects/status/y2ohjd5q86oagghu/branch/master?svg=true)](https://ci.appveyor.com/project/PowerShell/xPowerShellExecutionPolicy/branch/master)
+[![codecov](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/master/graph/badge.svg)](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/master)
 
 This is the branch containing the latest release -
 no contributions should be made directly to this branch.
@@ -17,6 +18,7 @@ no contributions should be made directly to this branch.
 ### dev
 
 [![Build status](https://ci.appveyor.com/api/projects/status/y2ohjd5q86oagghu/branch/dev?svg=true)](https://ci.appveyor.com/project/PowerShell/xPowerShellExecutionPolicy/branch/dev)
+[![codecov](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/dev/graph/badge.svg)](https://codecov.io/gh/PowerShell/xPowerShellExecutionPolicy/branch/dev)
 
 This is the development branch
 to which contributions should be proposed by contributors as pull requests.
@@ -41,6 +43,7 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 * [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode): Fixed bug in which unit tests were not being run and also when run would have failed ([issue #17](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/17)).
   * Fixed PSSA Issues as well.
   * Fixed Markdown Linting issues as well.
+* [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode): Enabled Code Coverage Support ([issue #18](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/18)).
 
 ### 2.0.0.0
 
