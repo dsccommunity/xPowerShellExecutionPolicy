@@ -28,10 +28,10 @@ $Global:invalidPolicyThrowMessage += "not belong to the set `"Bypass,Restricted,
 $Global:invalidPolicyThrowMessage += "specified by the ValidateSet attribute. Supply an argument that is in the set and then "
 $Global:invalidPolicyThrowMessage += "try the command again."
 
-$Global:invalidPolicyScopeThrowMessage = "Cannot validate argument on parameter 'Scope'. The argument `"badParam`" does "
-$Global:invalidPolicyScopeThrowMessage += "not belong to the set `"CurrentUser,LocalMachine,MachinePolicy,Process,UserPolicy`" "
-$Global:invalidPolicyScopeThrowMessage += "specified by the ValidateSet attribute. Supply an argument that is in the set and then "
-$Global:invalidPolicyScopeThrowMessage += "try the command again."
+$Global:invalidPolicyScopeLevelThrowMessage = "Cannot validate argument on parameter 'ScopeLevel'. The argument `"badParam`" does "
+$Global:invalidPolicyScopeLevelThrowMessage += "not belong to the set `"CurrentUser,LocalMachine,MachinePolicy,Process,UserPolicy`" "
+$Global:invalidPolicyScopeLevelThrowMessage += "specified by the ValidateSet attribute. Supply an argument that is in the set and then "
+$Global:invalidPolicyScopeLevelThrowMessage += "try the command again."
 
 # Begin Testing
 try
@@ -60,14 +60,14 @@ try
                 $result.ExecutionPolicy | should be $(Get-ExecutionPolicy)
             }
 
-            It 'Throws when passed an invalid execution policy Scope' {
-                { Get-TargetResource -ExecutionPolicy $(Get-ExecutionPolicy) -Scope "badParam" } | should throw $invalidPolicyScopeThrowMessage
+            It 'Throws when passed an invalid execution policy ScopeLevel' {
+                { Get-TargetResource -ExecutionPolicy $(Get-ExecutionPolicy) -ScopeLevel "badParam" } | should throw $invalidPolicyScopeLevelThrowMessage
             }
 
-            It 'Returns correct execution policy for the correct Scope' {
-                $result = Get-TargetResource -ExecutionPolicy $(Get-ExecutionPolicy -Scope 'LocalMachine') -Scope 'LocalMachine'
+            It 'Returns correct execution policy for the correct ScopeLevel' {
+                $result = Get-TargetResource -ExecutionPolicy $(Get-ExecutionPolicy -Scope  'LocalMachine') -ScopeLevel  'LocalMachine'
                 $result.ExecutionPolicy | should be $(Get-ExecutionPolicy -Scope 'LocalMachine')
-                $result.Scope | should be 'LocalMachine'
+                $result.ScopeLevel | should be 'LocalMachine'
             }
         }
         #endregion
@@ -98,10 +98,10 @@ try
                 Test-TargetResource -ExecutionPolicy $(Get-ExecutionPolicy) | should be $True
             }
 
-            It 'Returns false when current policy does not match desired policy with correct Scope' {
+            It 'Returns false when current policy does not match desired policy with correct ScopeLevel' {
                 Mock -CommandName Get-ExecutionPolicy -MockWith { "Restricted" }
 
-                Test-TargetResource -ExecutionPolicy "Bypass" -Scope 'LocalMachine'| should be $false
+                Test-TargetResource -ExecutionPolicy "Bypass" -ScopeLevel 'LocalMachine' | should be $false
             }
 
         }
@@ -115,8 +115,8 @@ try
                 { Set-TargetResource -ExecutionPolicy 'badParam' } | should throw $invalidPolicyThrowMessage
             }
 
-            It 'Throws when passed an invalid scope' {
-                { Set-TargetResource -ExecutionPolicy 'LocalMachine' -Scope "badParam" } | should throw $invalidScopeThrowMessage
+            It 'Throws when passed an invalid scope level' {
+                { Set-TargetResource -ExecutionPolicy 'LocalMachine' -ScopeLevel "badParam" } | should throw $invalidScopeThrowMessage
             }
 
             It 'Set-ExecutionPolicy scope warning exception is caught' {
@@ -144,7 +144,7 @@ try
             It 'Sets execution policy in spesified Scope' {
                 Mock -CommandName Set-ExecutionPolicy -MockWith { }
 
-                Set-TargetResource -ExecutionPolicy "Bypass" -Scope 'LocalMachine'
+                Set-TargetResource -ExecutionPolicy "Bypass" -ScopeLevel 'LocalMachine'
 
                 Assert-MockCalled -CommandName Set-ExecutionPolicy -Exactly 1 -Scope It
             }

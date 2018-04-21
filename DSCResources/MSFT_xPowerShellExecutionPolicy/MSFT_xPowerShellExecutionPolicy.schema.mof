@@ -3,7 +3,7 @@
 class MSFT_xPowerShellExecutionPolicy : OMI_BaseResource
 {
     [Key, Description("Changes the preference for the Windows PowerShell execution policy."), ValueMap{"Bypass","Restricted","AllSigned","RemoteSigned","Unrestricted"}, Values{"Bypass","Restricted","AllSigned","RemoteSigned","Unrestricted"}] String ExecutionPolicy;
-    [Write, Description("Defines the scope for the preference of the Windows PowerShell execution policy."), ValueMap{"CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy"},Values{"CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy"}] String Scope;
+    [Write, Description("Defines the scope for the preference of the Windows PowerShell execution policy."), ValueMap{"CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy"},Values{"CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy"}] String ScopeLevel;
 };
 
 

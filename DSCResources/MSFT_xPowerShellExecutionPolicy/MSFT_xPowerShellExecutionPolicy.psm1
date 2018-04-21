@@ -26,13 +26,13 @@ function Get-TargetResource
         [Parameter()]
         [ValidateSet("CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy")]
         [System.String]
-        $Scope = 'LocalMachine'
+        $ScopeLevel = 'LocalMachine'
     )
     
     #Gets the execution policies for the current session.
     $returnValue = @{
-        ExecutionPolicy = $(Get-ExecutionPolicy -Scope $Scope)
-        Scope = $Scope
+        ExecutionPolicy = $(Get-ExecutionPolicy -Scope $ScopeLevel)
+        ScopeLevel = $ScopeLevel
     }
 
     $returnValue
@@ -51,7 +51,7 @@ function Set-TargetResource
         [Parameter()]
         [ValidateSet("CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy")]
         [System.String]
-        $Scope = 'LocalMachine'
+        $ScopeLevel = 'LocalMachine'
     )
     
     If($PSCmdlet.ShouldProcess("$ExecutionPolicy","Set-ExecutionPolicy"))
@@ -59,7 +59,7 @@ function Set-TargetResource
         Try
         {
             Write-Verbose "Setting the execution policy of PowerShell."
-            Set-ExecutionPolicy -ExecutionPolicy $ExecutionPolicy -Force -ErrorAction Stop -Scope $Scope
+            Set-ExecutionPolicy -ExecutionPolicy $ExecutionPolicy -Force -ErrorAction Stop -Scope $ScopeLevel
         }
         Catch
         {
@@ -89,10 +89,10 @@ function Test-TargetResource
         [Parameter()]
         [ValidateSet("CurrentUser","LocalMachine","MachinePolicy","Process","UserPolicy")]
         [System.String]
-        $Scope = 'LocalMachine'
+        $ScopeLevel = 'LocalMachine'
     )
 
-    If($(Get-ExecutionPolicy -Scope $Scope) -eq $ExecutionPolicy)
+    If($(Get-ExecutionPolicy -Scope $ScopeLevel) -eq $ExecutionPolicy)
     {
         return $true
     }
