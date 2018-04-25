@@ -1,6 +1,6 @@
 <#
 .EXAMPLE
-    This example shows how to configure powershell's execution policy.
+    This example shows how to configure powershell's execution policy for the specified scope level.
 #>
 
 Configuration Example
