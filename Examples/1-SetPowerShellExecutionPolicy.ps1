@@ -1,6 +1,6 @@
 <#
 .EXAMPLE
-    This example shows how to configure powershell's execution policy for the specified scope level.
+    This example shows how to configure powershell's execution policy for the specified execution policy scope.
 #>
 
 Configuration Example
@@ -17,8 +17,8 @@ Configuration Example
     {
         xPowerShellExecutionPolicy ExecutionPolicy
         {
-            ExecutionPolicy = 'RemoteSigned'
-            ScopeLevel      = 'LocalMachine'
+            ExecutionPolicy      = 'RemoteSigned'
+            ExecutionPolicyScope = 'LocalMachine'
         }
     }
 }
