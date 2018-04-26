@@ -40,11 +40,11 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 
 ### Unreleased
 
-* [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode): Fixed bug in which unit tests were not being run and also when run would have failed ([issue #17](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/17)).
+* Fixed bug in which unit tests were not being run and also when run would have failed ([issue #17](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/17)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
   * Fixed PSSA Issues as well.
   * Fixed Markdown Linting issues as well.
-* [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode): Enabled Code Coverage Support ([issue #18](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/18)).
-* [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode) BREAKING CHANGE: Renamed the 'Scope' Parameter to 'ScopeLevel' since errors are thrown when the MOF file is parsed because 'Scope' is a reserved keyword in the DMTF Specification. ([issue #14](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/14)).
+* Enabled Code Coverage Support ([issue #18](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/18)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
+* BREAKING CHANGE: Renamed the 'Scope' Parameter to 'ScopeLevel' since errors are thrown when the MOF file is parsed because 'Scope' is a reserved keyword in the DMTF Specification. ([issue #14](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/14)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
 
 ### 2.0.0.0
 
