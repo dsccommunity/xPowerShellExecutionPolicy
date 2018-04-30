@@ -5,12 +5,6 @@
 
 Configuration Example
 {
-    param(
-        [Parameter(Mandatory = $true)]
-        [System.Management.Automation.PSCredential]
-        $SqlCredential
-    )
-
     Import-DscResource -ModuleName xPowerShellExecutionPolicy
 
     Node localhost
