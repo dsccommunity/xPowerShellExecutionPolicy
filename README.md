@@ -1,4 +1,10 @@
-# xPowerShellExecutionPolicy
+# **THIS MODULE HAS BEEN DEPRECATED**
+
+It will no longer be released.
+Please use the 'PowerShellExecutionPolicy' resource in [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc)
+instead.
+
+## xPowerShellExecutionPolicy
 
 The **xPowerShellExecutionPolicy** modules contains the **xPowerShellExecutionPolicy** DSC resource for configuring the PowerShell execution policy.
 
