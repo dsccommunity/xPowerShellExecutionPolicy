@@ -3,7 +3,7 @@
 
 # Version number of this module.
 
-ModuleVersion = '2.0.0.0'
+moduleVersion = '3.0.0.0'
 
 # ID used to uniquely identify this module
 GUID = 'ee440155-d4cc-4ec8-9822-2a9bd7d8c82f'
@@ -53,8 +53,11 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '* Converted appveyor.yml to install Pester from PSGallery instead of from Chocolatey.
-* Added optional -Scope parameter
+        ReleaseNotes = '* Fixed bug in which unit tests were not being run and also when run would have failed ([issue 17](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/17)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
+  * Fixed PSSA Issues as well.
+  * Fixed Markdown Linting issues as well.
+* Enabled Code Coverage Support ([issue 18](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/18)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
+* BREAKING CHANGE: Renamed the "Scope" Parameter to "ExecutionPolicyScope" since errors are thrown when the MOF file is parsed because "Scope" is a reserved keyword in the DMTF Specification. ([issue 14](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/14)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
 
 '
 
@@ -62,5 +65,6 @@ PrivateData = @{
 
 } # End of PrivateData hashtable
 }
+
 
 

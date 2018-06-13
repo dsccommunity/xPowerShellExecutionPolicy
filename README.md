@@ -40,6 +40,8 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 
 ### Unreleased
 
+### 3.0.0.0
+
 * Fixed bug in which unit tests were not being run and also when run would have failed ([issue #17](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/17)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
   * Fixed PSSA Issues as well.
   * Fixed Markdown Linting issues as well.
