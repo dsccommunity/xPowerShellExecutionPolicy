@@ -18,7 +18,8 @@ CompanyName = 'Microsoft Corporation'
 Copyright = '(c) 2014 Microsoft Corporation. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'This DSC Resources can change the user preference for the Windows PowerShell execution policy.'
+Description = 'This DSC resource can change the user preference for the Windows PowerShell execution policy. THIS MODULE HAS BEEN DEPRECATED
+It will no longer be released. Please use the "PowerShellExecutionPolicy" resource in ComputerManagementDsc instead.'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '4.0'
