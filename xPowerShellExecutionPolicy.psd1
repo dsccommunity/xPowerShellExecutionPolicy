@@ -3,7 +3,7 @@
 
 # Version number of this module.
 
-moduleVersion = '3.0.0.0'
+moduleVersion = '3.1.0.0'
 
 # ID used to uniquely identify this module
 GUID = 'ee440155-d4cc-4ec8-9822-2a9bd7d8c82f'
@@ -18,7 +18,8 @@ CompanyName = 'Microsoft Corporation'
 Copyright = '(c) 2014 Microsoft Corporation. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'This DSC Resources can change the user preference for the Windows PowerShell execution policy.'
+Description = 'This DSC resource can change the user preference for the Windows PowerShell execution policy. THIS MODULE HAS BEEN DEPRECATED
+It will no longer be released. Please use the "PowerShellExecutionPolicy" resource in ComputerManagementDsc instead.'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '4.0'
@@ -53,11 +54,7 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '* Fixed bug in which unit tests were not being run and also when run would have failed ([issue 17](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/17)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
-  * Fixed PSSA Issues as well.
-  * Fixed Markdown Linting issues as well.
-* Enabled Code Coverage Support ([issue 18](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/18)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
-* BREAKING CHANGE: Renamed the "Scope" Parameter to "ExecutionPolicyScope" since errors are thrown when the MOF file is parsed because "Scope" is a reserved keyword in the DMTF Specification. ([issue 14](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/14)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
+        ReleaseNotes = '* Deprecated this module. This resource module will no longer be released. Please use the PowerShellExecutionPolicy resource in ComputerManagementDsc instead.
 
 '
 
@@ -65,6 +62,7 @@ PrivateData = @{
 
 } # End of PrivateData hashtable
 }
+
 
 
 
