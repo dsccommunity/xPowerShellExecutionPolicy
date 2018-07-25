@@ -46,6 +46,8 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 
 ### Unreleased
 
+* Deprecated this module. This resource module will no longer be released. Please use the PowerShellExecutionPolicy resource in ComputerManagementDsc instead.
+
 ### 3.0.0.0
 
 * Fixed bug in which unit tests were not being run and also when run would have failed ([issue #17](https://github.com/PowerShell/xPowerShellExecutionPolicy/issues/17)). [Michael Fyffe (@TraGicCode)](https://github.com/TraGicCode)
